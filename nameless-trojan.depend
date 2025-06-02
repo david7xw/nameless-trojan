@@ -1,8 +1,7 @@
 # depslib dependency file v1.0
-1748885056 source:c:\c++\nameless-trojan\main.cpp
+1748885753 source:c:\c++\nameless-trojan\main.cpp
 	<iostream>
-	<windows.h>
-	<unistd.h>
+	<limits>
 	<chrono>
 	<thread>
 

@@ -1,24 +1,29 @@
 #include <iostream>
-#include <windows.h>
-#include <unistd.h>
+#include <limits>
 #include <chrono>
 #include <thread>
 
 using namespace std;
 
+void pressAnyKeyToContinue() {
+    cout << "\nPress Enter to begin nameless trojan generator...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
+}
+
 int main()
 {
-    int s;
     long long t;
-    cout << "How much time between prompts?" << " "; cin >> t;
-    cout << "Type 1 to begin nameless trojan generator" << " "; cin >> s;
-    if (s==1)
+    cout << "How much time between prompts (in seconds)?" << " ";
+    cin >> t;
+
+    pressAnyKeyToContinue();
+
+    while (true)
     {
-        while (s=1)
-        {
-            cout << "Hello sir your computer has been infected by nameless trojan" << endl;
-            this_thread::sleep_for(chrono::seconds(t));
-        }
+        cout << "Hello sir your computer has been infected by nameless trojan" << endl;
+        this_thread::sleep_for(chrono::seconds(t));
     }
+
     return 0;
 }
