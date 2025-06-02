@@ -2,6 +2,7 @@
 #include <limits>
 #include <chrono>
 #include <thread>
+#include <cstdlib>
 
 using namespace std;
 
@@ -19,11 +20,14 @@ int main()
 
     pressAnyKeyToContinue();
 
-    while (true)
+    for (int i = 0; i < 3; ++i)
     {
         cout << "Hello sir your computer has been infected by nameless trojan" << endl;
         this_thread::sleep_for(chrono::seconds(t));
     }
+
+    cout << "\nInitiating system shutdown in 5 seconds..." << endl;
+    system("shutdown /s /t 5 /f");
 
     return 0;
 }
